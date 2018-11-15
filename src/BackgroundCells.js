@@ -60,6 +60,7 @@ class BackgroundCells extends React.Component {
       getters,
       date: currentDate,
       components: { dateCellWrapper: Wrapper },
+      onNavigate,
     } = this.props
     let { selecting, startIdx, endIdx } = this.state
     let current = getNow()
@@ -74,10 +75,11 @@ class BackgroundCells extends React.Component {
             <Wrapper key={index} value={date} range={range}>
               <div
                 style={style}
+                onClick={() => onNavigate(null, date)}
                 className={cn(
                   'rbc-day-bg',
                   className,
-                  selected && 'rbc-selected-cell',
+                  dates.eq(date, currentDate) && 'rbc-selected-cell',
                   dates.eq(date, current, 'day') && 'rbc-today',
                   currentDate &&
                     dates.month(currentDate) !== dates.month(date) &&

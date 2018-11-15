@@ -156,6 +156,7 @@ class DateContentRow extends React.Component {
       resourceId,
       longPressThreshold,
       isAllDay,
+      onNavigate,
     } = this.props
 
     if (renderForMeasure) return this.renderDummy()
@@ -192,6 +193,7 @@ class DateContentRow extends React.Component {
           onSelectSlot={this.handleSelectSlot}
           components={components}
           longPressThreshold={longPressThreshold}
+          onNavigate={onNavigate}
         />
 
         <div className="rbc-row-content">

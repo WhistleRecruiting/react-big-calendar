@@ -231,6 +231,10 @@ class Calendar extends React.Component {
     /**
      * Callback fired when the `date` value changes.
      *
+     * This is the function that I hijacked to make the calendar work for our needs
+     * of selecting a date. Use this function for when a user clicks on the day square.
+     * It also fires when a user clicks the next or previous buttons.
+     *
      * @controllable date
      */
     onNavigate: PropTypes.func,
@@ -357,7 +361,7 @@ class Calendar extends React.Component {
      *
      * @type Calendar.Views ('month'|'week'|'work_week'|'day'|'agenda')
      * @View
-     ['month', 'week', 'day', 'agenda']
+      ['month', 'week', 'day', 'agenda']
      */
     views: componentViews,
 

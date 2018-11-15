@@ -146,6 +146,7 @@ class MonthView extends React.Component {
       longPressThreshold,
       accessors,
       getters,
+      onNavigate,
     } = this.props
 
     const { needLimitMeasure, rowLimit } = this.state
@@ -179,6 +180,7 @@ class MonthView extends React.Component {
         onSelectSlot={this.handleSelectSlot}
         longPressThreshold={longPressThreshold}
         rtl={this.props.rtl}
+        onNavigate={onNavigate}
       />
     )
   }
@@ -188,7 +190,7 @@ class MonthView extends React.Component {
 
     let isOffRange = dates.month(date) !== dates.month(currentDate)
     let isCurrent = dates.eq(date, currentDate, 'day')
-    let drilldownView = getDrilldownView(date)
+    // let drilldownView = getDrilldownView(date)
     let label = localizer.format(date, 'dateFormat')
     let DateHeaderComponent = this.props.components.dateHeader || DateHeader
 
@@ -204,9 +206,9 @@ class MonthView extends React.Component {
         <DateHeaderComponent
           label={label}
           date={date}
-          drilldownView={drilldownView}
+          // drilldownView={drilldownView}
           isOffRange={isOffRange}
-          onDrillDown={e => this.handleHeadingClick(date, drilldownView, e)}
+          // onDrillDown={e => this.handleHeadingClick(date, drilldownView, e)}
         />
       </div>
     )

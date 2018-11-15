@@ -66,8 +66,8 @@
 .rbc-date-cell {
   flex: 1 1 0;
   min-width: 0;
-  padding-right: 5px;
-  text-align: right;
+  padding-left: 5px;
+  text-align: left;
 
   &.rbc-now {
     font-weight: bold;
@@ -90,6 +90,7 @@
 }
 
 .rbc-day-bg {
+  cursor: pointer;
   flex: 1 0 0%;
 
   & + & {
@@ -113,6 +114,10 @@
   > * + * {
     margin-top: 1px;
   }
+}
+
+.rbc-day-bg:hover:not(.rbc-off-range-bg) {
+  background-color: rgba(11, 102, 35, 0.05);
 }
 
 .rbc-overlay-header {

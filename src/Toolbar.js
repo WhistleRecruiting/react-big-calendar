@@ -14,23 +14,29 @@ class Toolbar extends React.Component {
   }
 
   render() {
-    let { localizer: { messages }, label } = this.props
+    let {
+      localizer: { messages },
+      label,
+    } = this.props
 
     return (
       <div className="rbc-toolbar">
         <span className="rbc-btn-group">
-          <button
+          {/* <button
             type="button"
             onClick={this.navigate.bind(null, navigate.TODAY)}
           >
             {messages.today}
-          </button>
+          </button> */}
           <button
             type="button"
             onClick={this.navigate.bind(null, navigate.PREVIOUS)}
           >
             {messages.previous}
           </button>
+        </span>
+        <span className="rbc-toolbar-label">{label}</span>
+        <span className="rbc-btn-group">
           <button
             type="button"
             onClick={this.navigate.bind(null, navigate.NEXT)}
@@ -38,10 +44,6 @@ class Toolbar extends React.Component {
             {messages.next}
           </button>
         </span>
-
-        <span className="rbc-toolbar-label">{label}</span>
-
-        <span className="rbc-btn-group">{this.viewNamesGroup(messages)}</span>
       </div>
     )
   }
