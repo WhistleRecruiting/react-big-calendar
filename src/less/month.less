@@ -15,7 +15,8 @@
 }
 
 .rbc-selected-cell {
-  background-color: @date-selection-bg-color;
+  border: 3px solid red;
+  // background-color: @date-selection-bg-color;
 }
 
 
@@ -66,8 +67,8 @@
 .rbc-date-cell {
   flex: 1 1 0;
   min-width: 0;
-  padding-left: 5px;
-  text-align: left;
+  padding-right: 5px;
+  text-align: right;
 
   &.rbc-now {
     font-weight: bold;
@@ -93,14 +94,18 @@
   cursor: pointer;
   flex: 1 0 0%;
 
-  & + & {
-    border-left: 1px solid @cell-border;
-  }
-
   .rbc-rtl & + & {
     border-left-width: 0;
     border-right: 1px solid @cell-border;
   }
+}
+
+.rbc-day-bg:not(.rbc-selected-cell):not(.rbc-today) {
+
+  & + & {
+    border-left: 1px solid @cell-border;
+  }
+
 }
 
 .rbc-overlay {

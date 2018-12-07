@@ -32,7 +32,7 @@ class Toolbar extends React.Component {
             type="button"
             onClick={this.navigate.bind(null, navigate.PREVIOUS)}
           >
-            {messages.previous}
+            {'<'}
           </button>
         </span>
         <span className="rbc-toolbar-label">{label}</span>
@@ -41,7 +41,7 @@ class Toolbar extends React.Component {
             type="button"
             onClick={this.navigate.bind(null, navigate.NEXT)}
           >
-            {messages.next}
+            {'>'}
           </button>
         </span>
       </div>

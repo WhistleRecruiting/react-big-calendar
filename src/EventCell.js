@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import moment from 'moment'
 import cn from 'classnames'
 import dates from './utils/dates'
 
@@ -55,16 +56,22 @@ class EventCell extends React.Component {
 
     const content = (
       <div className="rbc-event-content" title={tooltip || undefined}>
-        {Event ? (
+        { /* adjust line-heights and font-sizes, get <img/> in there*/}
+        <div style={{display: 'flex'}}>
+          <div>IMG-</div>
+          <div style={{display: 'flex', flexDirection: 'column'}}>
+            <div>{event.title}</div>
+            <div style={{lineHeight: '12px', fontSize: '12px'}}>{`${moment(event.start).format('h:mm a')}`}</div>
+          </div>
+        </div>
+        {/* {Event && (
           <Event
             event={event}
             title={title}
             isAllDay={allDay}
             localizer={localizer}
           />
-        ) : (
-          title
-        )}
+        )} */}
       </div>
     )
 
