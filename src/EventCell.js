@@ -58,10 +58,10 @@ class EventCell extends React.Component {
       <div className="rbc-event-content" title={tooltip || undefined}>
         { /* adjust line-heights and font-sizes, get <img/> in there*/}
         <div style={{display: 'flex'}}>
-          <div>IMG-</div>
+          <img src={event.image} style={{width: 25, height: 25, borderRadius: '50%', marginRight: 5}} />
           <div style={{display: 'flex', flexDirection: 'column'}}>
-            <div>{event.title}</div>
-            <div style={{lineHeight: '12px', fontSize: '12px'}}>{`${moment(event.start).format('h:mm a')}`}</div>
+            <div style={{lineHeight: '12px', fontSize: '12px'}}>{event.title}</div>
+            <div style={{lineHeight: '10px', fontSize: '10px'}}>{`${moment(event.start).format('h:mm a')}`}</div>
           </div>
         </div>
         {/* {Event && (

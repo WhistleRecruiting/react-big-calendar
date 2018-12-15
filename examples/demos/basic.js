@@ -5,8 +5,14 @@ import dates from '../../src/utils/dates'
 
 let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k])
 
+let formats = {
+  dateFormat: 'dd',
+  monthHeaderFormat: 'MMMM',
+}
+
 let Basic = ({ localizer }) => (
   <BigCalendar
+    formats={formats}
     events={events}
     views={allViews}
     step={60}

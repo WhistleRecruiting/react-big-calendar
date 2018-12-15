@@ -2,13 +2,14 @@ export default [
   {
     id: 0,
     title: 'All Day Event very long title',
-    allDay: true,
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2015, 3, 0),
     end: new Date(2015, 3, 0),
   },
   {
     id: 1,
     title: 'Long Event',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2015, 3, 7),
     end: new Date(2015, 3, 7),
   },
@@ -16,6 +17,7 @@ export default [
   {
     id: 2,
     title: 'DTS STARTS',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2016, 2, 13, 0, 0, 0),
     end: new Date(2016, 2, 13, 0, 0, 0),
   },
@@ -23,6 +25,7 @@ export default [
   {
     id: 3,
     title: 'DTS ENDS',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2016, 10, 6, 0, 0, 0),
     end: new Date(2016, 10, 6, 0, 0, 0),
   },
@@ -30,12 +33,14 @@ export default [
   {
     id: 4,
     title: 'Some Event',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2015, 3, 9, 0, 0, 0),
     end: new Date(2015, 3, 9, 0, 0, 0),
   },
   {
     id: 5,
     title: 'Conference',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2015, 3, 11),
     end: new Date(2015, 3, 11),
     desc: 'Big conference for important people',
@@ -43,6 +48,7 @@ export default [
   {
     id: 6,
     title: 'Meeting',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2015, 3, 12, 10, 30, 0, 0),
     end: new Date(2015, 3, 12, 10, 30, 0, 0),
     desc: 'Pre-meeting meeting, to prepare for the meeting',
@@ -50,6 +56,7 @@ export default [
   {
     id: 7,
     title: 'Lunch',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2015, 3, 12, 12, 0, 0, 0),
     end: new Date(2015, 3, 12, 12, 0, 0, 0),
     desc: 'Power lunch',
@@ -57,12 +64,14 @@ export default [
   {
     id: 8,
     title: 'Meeting',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2015, 3, 12, 14, 0, 0, 0),
     end: new Date(2015, 3, 12, 14, 0, 0, 0),
   },
   {
     id: 9,
     title: 'Happy Hour',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2015, 3, 12, 17, 0, 0, 0),
     end: new Date(2015, 3, 12, 17, 30, 0, 0),
     desc: 'Most important meal of the day',
@@ -70,36 +79,42 @@ export default [
   {
     id: 10,
     title: 'Dinner',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2015, 3, 12, 20, 0, 0, 0),
     end: new Date(2015, 3, 12, 20, 0, 0, 0),
   },
   {
     id: 11,
     title: 'Birthday Party',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2015, 3, 13, 7, 0, 0),
     end: new Date(2015, 3, 13, 7, 30, 0),
   },
   {
     id: 12,
     title: 'Late Night Event',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2015, 3, 17, 19, 30, 0),
     end: new Date(2015, 3, 17, 2, 0, 0),
   },
   {
     id: 12.5,
     title: 'Late Same Night Event',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2015, 3, 17, 19, 30, 0),
     end: new Date(2015, 3, 17, 23, 30, 0),
   },
   {
     id: 13,
     title: 'Multi-day Event',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(2015, 3, 20, 19, 30, 0),
     end: new Date(2015, 3, 20, 2, 0, 0),
   },
   {
     id: 14,
     title: 'Today',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(new Date().setHours(new Date().getHours() - 3)),
     end: new Date(new Date().setHours(new Date().getHours() + 3)),
   },
