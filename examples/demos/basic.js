@@ -17,8 +17,8 @@ let Basic = ({ localizer }) => (
     views={allViews}
     step={60}
     showMultiDayTimes
-    max={dates.add(dates.endOf(new Date(2015, 17, 1), 'day'), -1, 'hours')}
-    defaultDate={new Date(2015, 3, 1)}
+    // max={dates.add(dates.endOf(new Date(2015, 17, 1), 'day'), -1, 'hours')}
+    defaultDate={new Date()}
     onNavigate={props => console.log('navigate', props)}
     localizer={localizer}
   />
