@@ -15,7 +15,8 @@
 }
 
 .rbc-selected-cell {
-  background-color: @date-selection-bg-color;
+  border: 2px solid #73bd32;
+  // background-color: @date-selection-bg-color;
 }
 
 
@@ -28,6 +29,7 @@
   height: auto;
   line-height: normal;
   white-space: nowrap;
+  color: #73bd32;
 }
 
 .rbc-month-view {
@@ -66,8 +68,9 @@
 .rbc-date-cell {
   flex: 1 1 0;
   min-width: 0;
-  padding-left: 5px;
-  text-align: left;
+  padding-right: 5px;
+  text-align: right;
+  color: #777;
 
   &.rbc-now {
     font-weight: bold;
@@ -93,14 +96,18 @@
   cursor: pointer;
   flex: 1 0 0%;
 
-  & + & {
-    border-left: 1px solid @cell-border;
-  }
-
   .rbc-rtl & + & {
     border-left-width: 0;
     border-right: 1px solid @cell-border;
   }
+}
+
+.rbc-day-bg:not(.rbc-selected-cell):not(.rbc-today) {
+
+  & + & {
+    border-left: 1px solid @cell-border;
+  }
+
 }
 
 .rbc-overlay {
@@ -117,7 +124,7 @@
 }
 
 .rbc-day-bg:hover:not(.rbc-off-range-bg) {
-  background-color: rgba(11, 102, 35, 0.05);
+  background-color: rgba(119, 119, 119, 0.05);
 }
 
 .rbc-overlay-header {

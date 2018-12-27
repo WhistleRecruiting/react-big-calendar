@@ -8,13 +8,16 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin: 7px 25px;
   font-size: 16px;
 
   .rbc-toolbar-label {
-    flex-grow:1;
+    flex-grow: 1;
     padding: 0 10px;
     text-align: center;
+    color: #777;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
   & button {
@@ -63,6 +66,7 @@
 .rbc-btn-group {
   display: inline-block;
   white-space: nowrap;
+  cursor: pointer;
 
   > button:first-child:not(:last-child) {
     border-top-right-radius: 0;
@@ -103,4 +107,21 @@
   & + button {
     margin-left: 10px;
   }
+}
+
+i.rbc-arrow {
+  border: 1px solid #777;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+.rbc-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.rbc-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }

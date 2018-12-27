@@ -59,9 +59,10 @@ button.rbc-input::-moz-focus-inner {
   color: #999999;
 }
 .rbc-off-range-bg {
-  background: #e5e5e5;
+  background: #ffffff;
 }
 .rbc-header {
+  color: #777;
   overflow: hidden;
   -webkit-flex: 1 0 0%;
       -ms-flex: 1 0 0%;
@@ -74,6 +75,7 @@ button.rbc-input::-moz-focus-inner {
   font-weight: bold;
   font-size: 90%;
   min-height: 0;
+  text-transform: uppercase;
   border-bottom: 1px solid #DDD;
 }
 .rbc-header + .rbc-header {
@@ -90,7 +92,7 @@ button.rbc-input::-moz-focus-inner {
   text-decoration: none;
 }
 .rbc-today {
-  background-color: #eaf6ff;
+  background-color: rgba(80, 154, 59, 0.1);
 }
 .rbc-toolbar {
   display: -webkit-flex;
@@ -105,7 +107,7 @@ button.rbc-input::-moz-focus-inner {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 10px;
+  margin: 7px 25px;
   font-size: 16px;
 }
 .rbc-toolbar .rbc-toolbar-label {
@@ -114,6 +116,9 @@ button.rbc-input::-moz-focus-inner {
           flex-grow: 1;
   padding: 0 10px;
   text-align: center;
+  color: #777;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .rbc-toolbar button {
   color: #373a3c;
@@ -157,6 +162,7 @@ button.rbc-input::-moz-focus-inner {
 .rbc-btn-group {
   display: inline-block;
   white-space: nowrap;
+  cursor: pointer;
 }
 .rbc-btn-group > button:first-child:not(:last-child) {
   border-top-right-radius: 0;
@@ -190,14 +196,25 @@ button.rbc-input::-moz-focus-inner {
 .rbc-btn-group + button {
   margin-left: 10px;
 }
+i.rbc-arrow {
+  border: 1px solid #777;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+}
+.rbc-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.rbc-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
 .rbc-event {
   border: none;
   box-shadow: none;
   margin: 0;
-  padding: 2px 5px;
-  background-color: #74ad31;
-  border-radius: 0px;
-  color: #fff;
+  color: black;
   cursor: pointer;
   width: 100%;
   text-align: left;
@@ -205,12 +222,6 @@ button.rbc-input::-moz-focus-inner {
 .rbc-slot-selecting .rbc-event {
   cursor: inherit;
   pointer-events: none;
-}
-.rbc-event.rbc-selected {
-  background-color: #598526;
-}
-.rbc-event:focus {
-  outline: 5px auto #75ad31;
 }
 .rbc-event-label {
   font-size: 80%;
@@ -246,7 +257,7 @@ button.rbc-input::-moz-focus-inner {
   padding: 0 1px 1px 1px;
 }
 .rbc-selected-cell {
-  background-color: rgba(44, 233, 34, 0.1);
+  border: 2px solid #73bd32;
 }
 .rbc-show-more {
   background-color: rgba(255, 255, 255, 0.3);
@@ -256,6 +267,7 @@ button.rbc-input::-moz-focus-inner {
   height: auto;
   line-height: normal;
   white-space: nowrap;
+  color: #73bd32;
 }
 .rbc-month-view {
   position: relative;
@@ -309,8 +321,9 @@ button.rbc-input::-moz-focus-inner {
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
   min-width: 0;
-  padding-left: 5px;
-  text-align: left;
+  padding-right: 5px;
+  text-align: right;
+  color: #777;
 }
 .rbc-date-cell.rbc-now {
   font-weight: bold;
@@ -339,12 +352,12 @@ button.rbc-input::-moz-focus-inner {
       -ms-flex: 1 0 0%;
           flex: 1 0 0%;
 }
-.rbc-day-bg + .rbc-day-bg {
-  border-left: 1px solid #DDD;
-}
 .rbc-rtl .rbc-day-bg + .rbc-day-bg {
   border-left-width: 0;
   border-right: 1px solid #DDD;
+}
+.rbc-day-bg:not(.rbc-selected-cell):not(.rbc-today) + .rbc-day-bg:not(.rbc-selected-cell):not(.rbc-today) {
+  border-left: 1px solid #DDD;
 }
 .rbc-overlay {
   position: absolute;
@@ -358,7 +371,7 @@ button.rbc-input::-moz-focus-inner {
   margin-top: 1px;
 }
 .rbc-day-bg:hover:not(.rbc-off-range-bg) {
-  background-color: rgba(11, 102, 35, 0.05);
+  background-color: rgba(119, 119, 119, 0.05);
 }
 .rbc-overlay-header {
   border-bottom: 1px solid #e5e5e5;
@@ -475,7 +488,6 @@ button.rbc-input::-moz-focus-inner {
   right: 0;
 }
 .rbc-day-slot .rbc-event {
-  border: 1px solid #598526;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
