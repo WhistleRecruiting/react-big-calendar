@@ -20,7 +20,7 @@ let Basic = ({ localizer }) => (
     showMultiDayTimes
     // max={dates.add(dates.endOf(new Date(2015, 17, 1), 'day'), -1, 'hours')}
     defaultDate={new Date()}
-    onNavigate={props => console.log('navigate', props)}
+    onNavigate={props => console.dir(props)}
     localizer={localizer}
   />
 )

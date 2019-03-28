@@ -15,14 +15,22 @@
 }
 
 .rbc-selected-cell {
+  position: relative;
+}
+
+.rbc-selected-cell::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
   border: 2px solid #73bd32;
-  // background-color: @date-selection-bg-color;
+  // z-index: 2;
 }
 
 
 .rbc-show-more {
   &:extend(.rbc-ellipsis);
-  background-color: rgba(255, 255, 255, 0.3);
+  // background-color: rgba(255, 255, 255, 0.3);
   z-index: @event-zindex;
   font-weight: bold;
   font-size: 85%;
@@ -30,6 +38,7 @@
   line-height: normal;
   white-space: nowrap;
   color: #73bd32;
+  margin: 0 5px;
 }
 
 .rbc-month-view {
@@ -102,7 +111,8 @@
   }
 }
 
-.rbc-day-bg:not(.rbc-selected-cell):not(.rbc-today) {
+/** .rbc-day-bg:not(.rbc-selected-cell):not(.rbc-today) { **/
+.rbc-day-bg {
 
   & + & {
     border-left: 1px solid @cell-border;

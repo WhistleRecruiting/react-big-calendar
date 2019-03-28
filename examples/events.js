@@ -117,14 +117,14 @@ export default [
       "Sean, we can't wait to get you on campus this weekend for your official",
     image: 'https://i.imgur.com/88Sshnn.jpg',
     start: new Date(new Date().setHours(new Date().getHours() - 3)),
-    end: new Date(new Date().setHours(new Date().getHours() - 2)),
+    end: new Date(new Date().setHours(new Date().getHours() - 3)),
   },
   {
     id: 15,
     title:
       "Sean, we can't wait to get you on campus this weekend for your official",
     image: 'https://i.imgur.com/88Sshnn.jpg',
-    start: new Date(new Date().setHours(new Date().getHours() - 4)),
+    start: new Date(new Date().setHours(new Date().getHours() - 3)),
     end: new Date(new Date().setHours(new Date().getHours() - 3)),
   },
   {
@@ -132,7 +132,7 @@ export default [
     title:
       "Sean, we can't wait to get you on campus this weekend for your official",
     image: 'https://i.imgur.com/88Sshnn.jpg',
-    start: new Date(new Date().setHours(new Date().getHours() - 5)),
+    start: new Date(new Date().setHours(new Date().getHours() - 4)),
     end: new Date(new Date().setHours(new Date().getHours() - 4)),
   },
   {
@@ -151,13 +151,13 @@ export default [
     start: new Date(new Date().setHours(new Date().getHours() - 7)),
     end: new Date(new Date().setHours(new Date().getHours() - 6)),
   },
-  // {
-  //   id: 19,
-  //   title: 'Today',
-  //   image: 'https://i.imgur.com/88Sshnn.jpg',
-  //   start: new Date(new Date().setHours(new Date().getHours() - 8)),
-  //   end: new Date(new Date().setHours(new Date().getHours() - 7)),
-  // },
+  {
+    id: 19,
+    title: 'Today',
+    image: 'https://i.imgur.com/88Sshnn.jpg',
+    start: new Date(new Date().setHours(new Date().getHours() - 8)),
+    end: new Date(new Date().setHours(new Date().getHours() - 7)),
+  },
   // {
   //   id: 20,
   //   title: 'Today',

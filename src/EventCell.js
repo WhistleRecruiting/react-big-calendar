@@ -104,13 +104,14 @@ class EventCell extends React.Component {
 
     return (
       <EventWrapper {...this.props} type="date">
-        <button
+        <div
           {...props}
           style={{
             ...userProps.style,
             ...style,
             padding: '2px 3px',
             borderRadius: '5px',
+            margin: '2px 0',
           }}
           className={cn('rbc-event', className, userProps.className, {
             'rbc-selected': selected,
@@ -118,11 +119,11 @@ class EventCell extends React.Component {
             'rbc-event-continues-prior': continuesPrior,
             'rbc-event-continues-after': continuesAfter,
           })}
-          onClick={e => onSelect && onSelect(event, e)}
-          onDoubleClick={e => onDoubleClick && onDoubleClick(event, e)}
+          // onClick={e => onSelect && onSelect(event, e)}
+          // onDoubleClick={e => onDoubleClick && onDoubleClick(event, e)}
         >
           {typeof children === 'function' ? children(content) : content}
-        </button>
+        </div>
       </EventWrapper>
     )
   }

@@ -20,7 +20,10 @@ class EventEndingRow extends React.Component {
   }
 
   render() {
-    let { segments, slotMetrics: { slots } } = this.props
+    let {
+      segments,
+      slotMetrics: { slots },
+    } = this.props
     let rowSegments = eventLevels(segments).levels[0]
 
     let current = 1,
@@ -85,14 +88,14 @@ class EventEndingRow extends React.Component {
     let count = eventsInSlot(segments, slot)
 
     return count ? (
-      <a
+      <span
         key={'sm_' + slot}
         href="#"
         className={'rbc-show-more'}
         onClick={e => this.showMore(slot, e)}
       >
         {localizer.messages.showMore(count)}
-      </a>
+      </span>
     ) : (
       false
     )
