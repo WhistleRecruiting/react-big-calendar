@@ -29,13 +29,13 @@ class Toolbar extends React.Component {
             {messages.today}
           </button> */}
           <div onClick={this.navigate.bind(null, navigate.PREVIOUS)}>
-            <i class="rbc-arrow rbc-left"></i>
+            <i className="rbc-arrow rbc-left" />
           </div>
         </span>
         <span className="rbc-toolbar-label">{label}</span>
         <span className="rbc-btn-group">
           <div onClick={this.navigate.bind(null, navigate.NEXT)}>
-            <i className="rbc-arrow rbc-right"></i>
+            <i className="rbc-arrow rbc-right" />
           </div>
         </span>
       </div>
