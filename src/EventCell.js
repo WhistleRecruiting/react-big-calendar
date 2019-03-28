@@ -56,12 +56,39 @@ class EventCell extends React.Component {
 
     const content = (
       <div className="rbc-event-content" title={tooltip || undefined}>
-        { /* adjust line-heights and font-sizes, get <img/> in there*/}
-        <div style={{display: 'flex'}}>
-          <img src={event.image} style={{width: 25, height: 25, borderRadius: '50%', marginRight: 5}} />
-          <div style={{display: 'flex', flexDirection: 'column'}}>
-            <div style={{lineHeight: '12px', fontSize: '12px'}}>{event.title}</div>
-            <div style={{lineHeight: '10px', fontSize: '10px'}}>{`${moment(event.start).format('h:mm a')}`}</div>
+        {/* adjust line-heights and font-sizes, get <img/> in there*/}
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <img
+            src={event.image}
+            style={{
+              width: 25,
+              height: 25,
+              borderRadius: '50%',
+              marginRight: 5,
+            }}
+          />
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              overflow: 'hidden',
+            }}
+          >
+            <div
+              style={{
+                lineHeight: '12px',
+                fontSize: '12px',
+                display: 'block',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              {event.title}
+            </div>
+            <div style={{ lineHeight: '10px', fontSize: '10px' }}>{`${moment(
+              event.start
+            ).format('h:mm a')}`}</div>
           </div>
         </div>
         {/* {Event && (
@@ -79,7 +106,12 @@ class EventCell extends React.Component {
       <EventWrapper {...this.props} type="date">
         <button
           {...props}
-          style={{ ...userProps.style, ...style }}
+          style={{
+            ...userProps.style,
+            ...style,
+            padding: '2px 3px',
+            borderRadius: '5px',
+          }}
           className={cn('rbc-event', className, userProps.className, {
             'rbc-selected': selected,
             'rbc-event-allday': showAsAllDay,

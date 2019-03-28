@@ -16,6 +16,7 @@ let Basic = ({ localizer }) => (
     events={events}
     views={allViews}
     step={60}
+    // popup={false}
     showMultiDayTimes
     // max={dates.add(dates.endOf(new Date(2015, 17, 1), 'day'), -1, 'hours')}
     defaultDate={new Date()}
