@@ -88,7 +88,7 @@ class MonthView extends React.Component {
   componentDidMount() {
     let running
 
-    if (this.state.needLimitMeasure) this.measureRowLimit(this.props)
+    if (this.state.needLimitMeasure) this.measureRowLimit()
 
     window.addEventListener(
       'resize',
@@ -129,7 +129,7 @@ class MonthView extends React.Component {
           {this.renderHeaders(weeks[0])}
         </div>
         {weeks.map(this.renderWeek)}
-        {this.props.popup && this.renderOverlay()}
+        {/* {this.props.popup && this.renderOverlay()} */}
       </div>
     )
   }
